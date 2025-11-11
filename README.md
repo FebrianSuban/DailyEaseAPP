@@ -1,126 +1,126 @@
 # DailyEase
 
-A modern, lightweight productivity mobile app built with React Native (Expo) that helps users manage their daily life through task management, habit tracking, and progress statistics.
+Aplikasi produktivitas mobile modern dan ringan yang dibangun dengan React Native (Expo) untuk membantu pengguna mengelola kehidupan sehari-hari mereka melalui manajemen tugas, pelacakan kebiasaan, dan statistik progres.
 
-## Features
+## Fitur
 
-### 🎯 Core Features
-- **To-Do List**: Add, edit, complete, and delete daily tasks with priority levels (low, medium, high)
-- **Habit Tracker**: Track daily habits with visual progress indicators and streak counting
-- **Statistics Dashboard**: View your productivity metrics including task completion rates, weekly habit completions, and current streaks
-- **Dark & Light Mode**: Automatic theme switching based on system preference, with manual override options
-- **User Authentication**: Secure email/password authentication using Supabase
-- **Cloud Sync**: All data automatically synced across devices via Supabase database
+### 🎯 Fitur Inti
+- **Daftar Tugas**: Tambah, edit, selesaikan, dan hapus tugas harian dengan tingkat prioritas (rendah, sedang, tinggi)
+- **Pelacak Kebiasaan**: Lacak kebiasaan harian dengan indikator progres visual dan penghitungan seri
+- **Dashboard Statistik**: Lihat metrik produktivitas Anda termasuk tingkat penyelesaian tugas, penyelesaian kebiasaan mingguan, dan seri saat ini
+- **Mode Gelap & Terang**: Pengalihan tema otomatis berdasarkan preferensi sistem, dengan opsi penggantian manual
+- **Autentikasi Pengguna**: Autentikasi email/kata sandi yang aman menggunakan Supabase
+- **Sinkronisasi Cloud**: Semua data secara otomatis disinkronkan di seluruh perangkat melalui basis data Supabase
 
-### ✨ UI/UX Highlights
-- Clean, modern interface with smooth transitions
-- Bottom tab navigation for easy access to all features
-- Color-coded priority levels and custom habit colors
-- Weekly progress visualization for habits
-- Real-time statistics and insights
+### ✨ Sorotan UI/UX
+- Antarmuka bersih dan modern dengan transisi yang mulus
+- Navigasi tab bawah untuk akses mudah ke semua fitur
+- Tingkat prioritas yang dikodekan warna dan warna kebiasaan khusus
+- Visualisasi progres mingguan untuk kebiasaan
+- Statistik dan wawasan real-time
 
-## Tech Stack
+## Stack Teknologi
 
 - **Framework**: React Native (Expo SDK 54)
 - **State Management**: Zustand
 - **Database**: Supabase (PostgreSQL)
-- **Authentication**: Supabase Auth
-- **Icons**: Lucide React Native
+- **Autentikasi**: Supabase Auth
+- **Ikon**: Lucide React Native
 - **Styling**: React Native StyleSheet API
 
-## Getting Started
+## Memulai
 
-### Prerequisites
+### Prasyarat
 - Node.js 18+
-- Expo Go app (for testing on physical devices)
+- Aplikasi Expo Go (untuk pengujian di perangkat fisik)
 
-### Installation
+### Instalasi
 
-1. Install dependencies:
+1. Instal dependensi:
 ```bash
 npm install
 ```
 
-2. Environment variables are pre-configured in `.env`
+2. Variabel lingkungan sudah dikonfigurasi di `.env`
 
-3. Start the development server:
+3. Jalankan server pengembangan:
 ```bash
 npm run dev
 ```
 
-4. Open the app:
-   - Scan the QR code with Expo Go (Android) or Camera app (iOS)
-   - Press `w` to open in web browser
+4. Buka aplikasi:
+   - Pindai kode QR dengan Expo Go (Android) atau Aplikasi Kamera (iOS)
+   - Tekan `w` untuk membuka di browser web
 
-## Project Structure
+## Struktur Proyek
 
 ```
 ├── app/
-│   ├── (tabs)/           # Tab-based navigation screens
-│   │   ├── index.tsx     # Home (Tasks) screen
-│   │   ├── habits.tsx    # Habits screen
-│   │   ├── stats.tsx     # Statistics screen
-│   │   └── settings.tsx  # Settings screen
-│   ├── auth/             # Authentication screens
+│   ├── (tabs)/           # Layar navigasi berbasis tab
+│   │   ├── index.tsx     # Layar Beranda (Tugas)
+│   │   ├── habits.tsx    # Layar Kebiasaan
+│   │   ├── stats.tsx     # Layar Statistik
+│   │   └── settings.tsx  # Layar Pengaturan
+│   ├── auth/             # Layar autentikasi
 │   │   ├── sign-in.tsx
 │   │   └── sign-up.tsx
-│   └── _layout.tsx       # Root layout with auth routing
-├── components/           # Reusable UI components
+│   └── _layout.tsx       # Tata letak root dengan perutean auth
+├── components/           # Komponen UI yang dapat digunakan kembali
 │   ├── TaskCard.tsx
 │   ├── HabitCard.tsx
 │   └── AddButton.tsx
-├── store/               # Zustand state management
+├── store/               # Manajemen state Zustand
 │   ├── useAuthStore.ts
 │   ├── useTaskStore.ts
 │   ├── useHabitStore.ts
 │   └── useSettingsStore.ts
 ├── lib/
-│   └── supabase.ts      # Supabase client configuration
-├── types/               # TypeScript type definitions
-├── constants/           # App constants (colors, etc.)
-└── hooks/              # Custom React hooks
+│   └── supabase.ts      # Konfigurasi klien Supabase
+├── types/               # Definisi tipe TypeScript
+├── constants/           # Konstanta aplikasi (warna, dll)
+└── hooks/              # Hook React khusus
 ```
 
-## Database Schema
+## Skema Database
 
-### Tables
-- **tasks**: User's daily tasks with priority, completion status, and optional reminders
-- **habits**: Habit definitions with custom colors and target frequencies
-- **habit_logs**: Daily habit completion records
-- **user_settings**: User preferences including theme and username
+### Tabel
+- **tasks**: Tugas harian pengguna dengan prioritas, status penyelesaian, dan pengingat opsional
+- **habits**: Definisi kebiasaan dengan warna khusus dan frekuensi target
+- **habit_logs**: Catatan penyelesaian kebiasaan harian
+- **user_settings**: Preferensi pengguna termasuk tema dan nama pengguna
 
-All tables are protected with Row Level Security (RLS) policies ensuring users can only access their own data.
+Semua tabel dilindungi dengan kebijakan Row Level Security (RLS) yang memastikan pengguna hanya dapat mengakses data mereka sendiri.
 
-## Usage
+## Penggunaan
 
-### Creating Tasks
-1. Navigate to the Home tab
-2. Tap the + button
-3. Enter task details and select priority
-4. Tap "Add Task"
+### Membuat Tugas
+1. Navigasi ke tab Beranda
+2. Ketuk tombol +
+3. Masukkan detail tugas dan pilih prioritas
+4. Ketuk "Tambah Tugas"
 
-### Tracking Habits
-1. Navigate to the Habits tab
-2. Tap the + button
-3. Enter habit name and choose a color
-4. Mark habits as completed daily
+### Melacak Kebiasaan
+1. Navigasi ke tab Kebiasaan
+2. Ketuk tombol +
+3. Masukkan nama kebiasaan dan pilih warna
+4. Tandai kebiasaan sebagai selesai setiap hari
 
-### Viewing Stats
-Navigate to the Stats tab to see:
-- Task completion rate
-- Weekly habit completions
-- Current streak
-- Overall summary
+### Melihat Statistik
+Navigasi ke tab Statistik untuk melihat:
+- Tingkat penyelesaian tugas
+- Penyelesaian kebiasaan mingguan
+- Seri saat ini
+- Ringkasan keseluruhan
 
-### Customizing Settings
-1. Navigate to the Settings tab
-2. Choose your preferred theme (Light, Dark, or Auto)
-3. View account information
-4. Sign out when needed
+### Menyesuaikan Pengaturan
+1. Navigasi ke tab Pengaturan
+2. Pilih tema pilihan Anda (Terang, Gelap, atau Otomatis)
+3. Lihat informasi akun
+4. Keluar jika diperlukan
 
-## Development
+## Pengembangan
 
-### Type Checking
+### Pemeriksaan Tipe
 ```bash
 npm run typecheck
 ```
@@ -130,11 +130,11 @@ npm run typecheck
 npm run lint
 ```
 
-### Building for Production
+### Membangun untuk Produksi
 ```bash
 npm run build:web
 ```
 
-## License
+## Lisensi
 
-This project is created for demonstration purposes.
+Proyek ini dibuat untuk tujuan demonstrasi.
