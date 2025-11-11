@@ -1,7 +1,10 @@
 {
-  "name": "bolt-expo-starter",
+  "name": "dailyease",
   "main": "expo-router/entry",
   "version": "1.0.0",
+  "description": "Aplikasi produktivitas mobile untuk manajemen tugas dan pelacakan kebiasaan",
+  "author": "Febrian Suban",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "EXPO_NO_TELEMETRY=1 expo start",

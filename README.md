@@ -137,4 +137,6 @@ npm run build:web
 
 ## Lisensi
 
-Proyek ini dibuat untuk tujuan demonstrasi.
+© 2025 Febrian Suban. Proyek ini dilisensikan di bawah lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail lengkap.
+
+Dengan menggunakan, memodifikasi, atau mendistribusikan proyek ini, Anda setuju dengan ketentuan lisensi MIT yang menyebutkan nama pencipta asli (Febrian Suban).
